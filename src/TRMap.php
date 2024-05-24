@@ -56,6 +56,18 @@ class TRMap extends Field
         return $this->withMeta(['hide_longitude' => true]);
     }
 
+    public function hideName()
+    {
+        return $this->withMeta(['hideName' => true]);
+    }
+
+    public function hidePlaceId()
+    {
+        return $this->withMeta(['hidePlaceId' => true]);
+    }
+
+
+
     protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)
     {
         foreach ($request->input($attribute) as $attr => $data) {
